@@ -51,8 +51,6 @@ public class Main {
         exit_fileItem = new JMenuItem("Exit");
         JTextArea textArea = new JTextArea(WIDTH - 48, HEIGHT - 64 - 32);
 
-        themes.updateTheme(themes.themeNumber); //Update program when theme is changed
-
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
         menuBar.add(settingsMenu);
@@ -87,7 +85,7 @@ public class Main {
 
         //Action listeners (used for interactions like clicking mouse and pressing buttons)
         //This also allows for many fun cool things to happen like auto clickers and what not..
-        //Well for the most part.. anyways this is just a note to self.
+        //Well for the most part.. anyway this is just a note to self.
         new_fileItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -187,7 +185,6 @@ public class Main {
         panel.setLocation(16, 16);
 
         panel1.setLayout(new BorderLayout());
-        //panel1.setBackground(themes.editorColor);
         panel1.setBackground(themes.getEditorColor());
 
         frame.setIconImage(imageIcon.getImage());

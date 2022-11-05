@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class PreferencePrompt extends Main {
     void window(){
-
+        int themePick;
         Main main = new Main();
         Themes themes = new Themes();
         String themeCollection[] = {"Snow Land", "Pink Cloud", "Green Plains", "Galaxy Haze", "Chaotic Love", "Purple Fog", "Shining Mirror", "Oribi", "Color Fusion", "Abstract Thoughts", "Tinted Glass", "Summer Shade", "Lost feelings"};
@@ -33,16 +33,12 @@ public class PreferencePrompt extends Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-        themeDropDown.setSelectedIndex(6);
-
         themeDropDown.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 switch (themeDropDown.getSelectedIndex()){
                     case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12:
-                        themes.themeNumber = themeDropDown.getSelectedIndex();
                         themes.updateTheme(themeDropDown.getSelectedIndex());
-                        System.out.println("index: " + themeDropDown.getSelectedIndex() + "[Theme number]: " + themes.themeNumber);
                         panel1.repaint();
                         textArea.repaint();
                         break;
